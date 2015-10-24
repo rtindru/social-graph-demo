@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Graph Demo Home</title>
+    Hello! {{ user }}
+
+    {% if friends %}
+    <h2>Friends</h2>
+    <ul>
+        {% for friend in friends %}
+        <li>{{ friend }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h3>No friends here yet!</h3>
+    {% endif %}
+
+    {% if fof.2 %}
+    <h2>Friends of Friends</h2>
+    <ul>
+        {% for friend in fof.2 %}
+        <li>{{ friend }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h3>No friends of friends here yet!</h3>
+    {% endif %}
+     <h4>Items you have purchased:</h4>
+    {{ purchases }}
+    <h4>Items your friends have purchased:</h4>
+    {{ friend_purchases }}
+</head>
+<body>
+
+</body>
+</html>
